@@ -1,0 +1,119 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-concrete: #F5F3F0;
+    --color-asphalt: #111110;
+    --color-amber: #D97706;
+    --color-amber-deep: #B45309;
+    --color-amber-light: #FEF3C7;
+    --color-steel: #6B7280;
+    --color-border: #E5E2DC;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--color-concrete);
+    color: var(--color-asphalt);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+  }
+
+  .font-body {
+    font-family: 'Inter', sans-serif;
+  }
+
+  .text-concrete {
+    color: var(--color-concrete);
+  }
+
+  .bg-concrete {
+    background-color: var(--color-concrete);
+  }
+
+  .text-asphalt {
+    color: var(--color-asphalt);
+  }
+
+  .bg-asphalt {
+    background-color: var(--color-asphalt);
+  }
+
+  .text-amber-intense {
+    color: var(--color-amber);
+  }
+
+  .bg-amber-intense {
+    background-color: var(--color-amber);
+  }
+
+  .bg-amber-deep {
+    background-color: var(--color-amber-deep);
+  }
+
+  .border-asphalt {
+    border-color: var(--color-asphalt);
+  }
+
+  .border-amber-intense {
+    border-color: var(--color-amber);
+  }
+
+  .section-padding {
+    padding-top: 9rem;
+    padding-bottom: 9rem;
+  }
+
+  @media (min-width: 1024px) {
+    .section-padding {
+      padding-top: 10rem;
+      padding-bottom: 10rem;
+    }
+  }
+
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-concrete);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-amber);
+}
+
+/* Image loading */
+img {
+  display: block;
+  max-width: 100%;
+}
